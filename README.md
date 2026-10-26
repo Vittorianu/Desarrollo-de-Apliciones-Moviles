@@ -1,67 +1,53 @@
-[readme.md](https://github.com/user-attachments/files/33981596/readme.md)
-# Desarrollo-de-Apliciones-Moviles# 🤝 Trato Hecho - Android App
+[readme.md](https://github.com/user-attachments/files/33981636/readme.md)
+# Trato Hecho - Android App
 
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white)
+Trato Hecho es una aplicación móvil Android orientada a la gestión comercial. Su objetivo principal es facilitar la administración de clientes, cotizaciones, facturas y órdenes de compra, destacando por su funcionamiento offline y sincronización de datos.
 
-Trato Hecho es una aplicación móvil nativa para Android diseñada para optimizar la gestión comercial. Permite a los usuarios administrar clientes, generar cotizaciones, gestionar facturas y órdenes de compra, todo con soporte para **modo offline** y sincronización de datos.
+## Características Principales
 
-## ✨ Características Principales
+* Gestión de clientes: Creación, edición y listado.
+* Cotizaciones y facturación: Flujo completo de ventas y emisión de comprobantes.
+* Gestión empresarial: Administración de datos de la empresa y contactos.
+* Arquitectura Offline-First: Persistencia de datos en local y sincronización diferida.
+* Autenticación y seguridad: Control de acceso basado en roles de usuario.
+* Panel de administración: Vista dedicada para la gestión interna.
+* Soporte multimoneda: Consulta de indicadores económicos y configuración de divisas.
 
-*   **👥 Gestión de Clientes:** Creación, edición y listado de clientes (`ClientFormScreen`, `ClientListScreen`).
-*   **📄 Cotizaciones y Facturación:** Flujo completo para crear cotizaciones y emitir facturas (`BillingScreen`).
-*   **🏢 Gestión de Empresas:** Administración de datos empresariales y contactos.
-*   **📴 Modo Offline First:** Funcionamiento sin conexión con persistencia de datos local y sincronización posterior (`TratoHechoDataStore`, `EstadoSincronizacion`).
-*   **🔐 Autenticación:** Inicio de sesión seguro y gestión de sesiones de usuario con distintos roles (`RolUsuario`).
-*   **📊 Panel de Administración:** Vista dedicada para tareas administrativas (`AdminScreen`).
-*   **💰 Indicadores Económicos:** Consulta de indicadores y múltiples monedas configurables.
+## Stack Tecnológico y Arquitectura
 
-## 🛠️ Tecnologías y Arquitectura
+* Lenguaje: Kotlin
+* Interfaz de usuario: Jetpack Compose
+* Almacenamiento local: DataStore y base de datos local
+* Navegación: Compose Navigation
+* Arquitectura: Separación por capas (`data`, `model`, `ui`, `navigation`)
+* Manejo de estado: Estados de UI tipados y gestión de resultados
 
-El proyecto está construido utilizando las herramientas y prácticas modernas de desarrollo en Android:
+## Estructura del Proyecto
 
-*   **Lenguaje:** [Kotlin](https://kotlinlang.org/)
-*   **UI Toolkit:** [Jetpack Compose](https://developer.android.com/jetpack/compose) para una interfaz de usuario declarativa.
-*   **Almacenamiento Local:** DataStore (preferencias y estado de sesión) y base de datos local (`LocalDatabaseRepository`).
-*   **Navegación:** Compose Navigation (`AppNavigation`).
-*   **Arquitectura:** Basada en componentes limpios (Separación en capas: `data`, `model`, `ui`, `navigation`).
-*   **Gestión de Estado:** Manejo de estados de UI y resultados (`Resultado`, `ResultadoLogin`, `Cargando`, `Exito`, `Error`).
+* `data`: Repositorios, DataStore y lógica de acceso a datos.
+* `model`: Clases de dominio (Cliente, Cotizacion, Factura, etc.).
+* `ui.screen`: Pantallas principales de la aplicación.
+* `ui.components`: Componentes visuales reutilizables.
+* `navigation`: Configuración del grafo de navegación.
 
-## 📂 Estructura del Proyecto (Resumen)
+## Instalación Local
 
-*   `com.example.android_16.data`: Repositorios y DataStore (manejo de datos locales, offline y sincronización).
-*   `com.example.android_16.model`: Clases de datos del dominio (`Cliente`, `Cotizacion`, `Factura`, `Empresa`, etc.).
-*   `com.example.android_16.ui.screen`: Pantallas principales construidas con Compose (`AdminScreen`, `BillingScreen`, `ClientListScreen`, etc.).
-*   `com.example.android_16.ui.components`: Componentes de UI reutilizables (ej. `StatCard`, `StatusBadge`, `ValidatedTextField`).
-*   `com.example.android_16.navigation`: Configuración de rutas y navegación de la app.
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/android_16.git
+   ```
+2. Abrir el proyecto en Android Studio.
+3. Sincronizar los archivos de Gradle.
+4. Ejecutar la aplicación en un dispositivo físico o emulador.
 
-## 🚀 Instalación y Configuración
+## Contribución
 
-Sigue estos pasos para compilar y ejecutar el proyecto en tu entorno local:
+1. Realizar un Fork del repositorio.
+2. Crear una rama para los cambios (`git checkout -b feature/nueva-funcion`).
+3. Hacer commit de los cambios (`git commit -m 'Agrega nueva función'`).
+4. Subir la rama (`git push origin feature/nueva-funcion`).
+5. Abrir un Pull Request.
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone https://github.com/tu-usuario/android_16.git
-    ```
-2.  **Abrir en Android Studio:**
-    *   Abre Android Studio (se recomienda la versión más reciente compatible con Compose).
-    *   Selecciona `File > Open...` y busca la carpeta del proyecto clonado.
-3.  **Sincronizar Gradle:**
-    *   Espera a que Gradle descargue las dependencias y configure el proyecto.
-4.  **Ejecutar la aplicación:**
-    *   Conecta un dispositivo físico o inicia un emulador de Android.
-    *   Haz clic en el botón de **Run** (Shift + F10) en Android Studio.
+## Licencia
 
-## 🤝 Contribución
-
-Si deseas contribuir a este proyecto:
-1. Haz un *Fork* del repositorio.
-2. Crea una rama para tu función (`git checkout -b feature/NuevaFuncion`).
-3. Realiza tus cambios y haz *commit* (`git commit -m 'Añade nueva función'`).
-4. Sube la rama (`git push origin feature/NuevaFuncion`).
-5. Abre un *Pull Request*.
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia [MIT/Propietaria - *Actualizar según corresponda*].
+Este proyecto está bajo la Licencia [MIT / Propietaria - Actualizar según corresponda].
