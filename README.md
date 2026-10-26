@@ -29,25 +29,3 @@ Trato Hecho es una aplicación móvil Android orientada a la gestión comercial.
 * `ui.screen`: Pantallas principales de la aplicación.
 * `ui.components`: Componentes visuales reutilizables.
 * `navigation`: Configuración del grafo de navegación.
-
-## Instalación Local
-
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/android_16.git
-   ```
-2. Abrir el proyecto en Android Studio.
-3. Sincronizar los archivos de Gradle.
-4. Ejecutar la aplicación en un dispositivo físico o emulador.
-
-## Contribución
-
-1. Realizar un Fork del repositorio.
-2. Crear una rama para los cambios (`git checkout -b feature/nueva-funcion`).
-3. Hacer commit de los cambios (`git commit -m 'Agrega nueva función'`).
-4. Subir la rama (`git push origin feature/nueva-funcion`).
-5. Abrir un Pull Request.
-
-## Licencia
-
-Este proyecto está bajo la Licencia [MIT / Propietaria - Actualizar según corresponda].
